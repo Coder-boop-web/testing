@@ -55,6 +55,11 @@ jobs:
           fetch-depth: 0 # Let's get all the branches.
 
       # Make a branch, file, and commit for the learner.
+      - name: pull
+        run: |
+          echo "pull"
+          git pull          
+      
       - name: Prepare a branch, and file
         run: |
           echo "Make sure we are on step 0"
@@ -67,7 +72,7 @@ jobs:
 
           echo "Make a branch"
           BRANCH=welcome-workflow
-          git checkout -b $BRANCH
+          git checkout -b $BRANCHworkflow2e2542
 
           echo "Make a commit"
           git config user.name github-actions[bot]
@@ -83,6 +88,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # In README.md, switch step 0 for step 1.
+
       - name: Update to step 1
         uses: skills/action-update-step@v2
         with:
