@@ -71,7 +71,7 @@ jobs:
           fi
 
           echo "Make a branch"
-          BRANCH=welcome-workflow2e2542
+          BRANCH=welcome-workflow2e25421
           git checkout -b $BRANCH
 
           echo "Make a commit"
@@ -95,4 +95,4 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           from_step: 0
           to_step: 1
-          branch_name: welcome-workflow2e2542
+          branch_name: welcome-workflow2e25421
