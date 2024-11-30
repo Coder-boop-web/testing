@@ -58,6 +58,7 @@ jobs:
       - name: Prepare a branch, and file
         run: |
           echo "Make sure we are on step 0"
+          git pull
           if [ "$(cat .github/steps/-step.txt)" != 0 ]
           then
             echo "Current step is not 0"
